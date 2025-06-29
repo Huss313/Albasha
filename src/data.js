@@ -46,7 +46,7 @@ export const menuData = {
     {
       id: 7,
       name: 'فروج كامل عالفحم',
-      description: 'مع سرفيس عالفحم',
+      description: 'مع سرفيس كامل',
       price: 10,
       currency:'$',
       category: 'وجبات الدجاج'
