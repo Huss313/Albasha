@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../Images/bashapic.jpg';
+//import logo from '../Images/bashapic.png';
 import './Navbar.css';
-
+// Replace the import with:
+const logo = process.env.PUBLIC_URL + '/Images/bashapic.png';
 function Navbar() {
   return (
     <nav className="navbar">
