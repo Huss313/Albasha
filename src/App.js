@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import CategoryButton from './components/CategoryButton';
 import MenuItem from './components/MenuItem';
 import Contact from './components/Contact';
+import MyComponent from './components/MyComponent'; // Add this import
 import './App.css';
 
 function App() {
@@ -34,30 +35,33 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={
-            <div className="container">
-              <div className="menu-header">
-                <div className="category-buttons">
-                  <CategoryButton
-                    category="All"
-                    active={activeCategory === 'All'}
-                    onClick={setActiveCategory}
-                  />
-                  {menuData.categories.map((category) => (
+            <>
+              <div className="container">
+                <div className="menu-header">
+                  <div className="category-buttons">
                     <CategoryButton
-                      key={category}
-                      category={category}
-                      active={activeCategory === category}
+                      category="All"
+                      active={activeCategory === 'All'}
                       onClick={setActiveCategory}
                     />
+                    {menuData.categories.map((category) => (
+                      <CategoryButton
+                        key={category}
+                        category={category}
+                        active={activeCategory === category}
+                        onClick={setActiveCategory}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <div className="menu-items">
+                  {itemsWithFormattedPrices.map((item) => (
+                    <MenuItem key={item.id} item={item} />
                   ))}
                 </div>
               </div>
-              <div className="menu-items">
-                {itemsWithFormattedPrices.map((item) => (
-                  <MenuItem key={item.id} item={item} />
-                ))}
-              </div>
-            </div>
+              <MyComponent /> 
+            </>
           } />
           <Route path="/contact" element={<Contact />} />
         </Routes>
