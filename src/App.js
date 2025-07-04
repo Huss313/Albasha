@@ -60,7 +60,7 @@ function App() {
                   ))}
                 </div>
               </div>
-              <MyComponent /> 
+              
             </>
           } />
           <Route path="/contact" element={<Contact />} />
