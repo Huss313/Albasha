@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import CategoryButton from './components/CategoryButton';
 import MenuItem from './components/MenuItem';
 import Contact from './components/Contact';
-import MyComponent from './components/MyComponent'; // Add this import
+//import MyComponent from './components/MyComponent'; // Add this import
 import './App.css';
 
 function App() {
@@ -60,7 +60,6 @@ function App() {
                   ))}
                 </div>
               </div>
-              
             </>
           } />
           <Route path="/contact" element={<Contact />} />
